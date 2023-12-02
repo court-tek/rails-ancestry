@@ -1,0 +1,28 @@
+.grid {
+    background-color: #ffffff;
+    min-height: 600px;
+}
+
+.grid__grid-area {
+    --column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 4fr));
+}
+
+.grid__page-area {
+    padding: 20px;
+}
+
+.edit {
+    background-color: #4CAF50;
+}
+
+.back-btn {
+    background-color: #008CBA;
+}
+
+.destroy {
+    background-color: #f44336;
+    margin-top: 20px;
+}
+

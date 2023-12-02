@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "page", "data-turbo-track": "reload" %>
+
+<div id="<%= dom_id page %>" class="page">
+  <p>
+    <strong>Content:</strong>
+    <%= page.content %>
+  </p>
+
+  <p>
+    <strong>Ancestry:</strong>
+    <%= page.ancestry %>
+  </p>
+
+</div>

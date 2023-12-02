@@ -1,0 +1,17 @@
+header {
+    margin: 100px 0 0;
+    background-color: #000;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+header a.active {
+    background-color: red;
+    color: white;
+}

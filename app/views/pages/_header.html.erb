@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "header", "data-turbo-track": "reload" %>
+
+
+<header>
+  <nav>
+    <% Page.roots.each do |page| %>
+      <%= link_to page.name, page, class: ("active" if @page.root == page) %>
+    <% end %>
+  </nav>
+</header>

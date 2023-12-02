@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "show", "data-turbo-track": "reload" %>
+
+<%= render "header" %>
+
+<section class="grid">
+  <p style="color: green"><%= notice %></p>
+    <!-- menu area-->
+  <div class="grid__grid-area">
+    <div class="sidemenu">
+      <%= render "sidemenu", pages: @page.root.children %>
+    </div>
+
+    <!-- content area right -->
+    <div class="grid__page-area">
+      <div class="grid__breadcrumbs">
+        <% @page.ancestors.each do |page| %> 
+          <%= link_to page.name, page %> /
+        <% end %>
+        <%= @page.name %>
+      </div>
+      <%= render @page %>
+
+      <!-- secondary navigation and controls -->
+      <div>
+        <%= link_to "Edit this page", edit_page_path(@page), class: "button1 edit" %>
+        <%= link_to "Back to pages", pages_path, class: "button1 back-btn" %>
+
+        <%= button_to "Destroy this page", @page, method: :delete, class: "button1 destroy" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+.home {
+    margin-bottom: 20px;
+    color: white;
+    .hello {
+        color: red;
+    }
+}
+
+.pages {
+    --column-count: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr) ;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.pages__inner-content {
+    background-color: white;
+    padding: 15px;
+}
+
+.login {
+    background-color: #008CBA;
+}
+
+.new-page {
+    background-color: #008CBA;
+}
+

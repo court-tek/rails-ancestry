@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "show", "data-turbo-track": "reload" %>
+<ul>
+  <% pages.each do |page| %>
+    <li>
+      <%= link_to_unless_current page.name, page %>
+        <ul>
+            <%= render "sidemenu", pages: page.children if page.children.present? %>
+        </ul>
+    </li>
+  <% end %>
+</ul>

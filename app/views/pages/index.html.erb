@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
+
+
+<p style="color: green"><%= notice %></p>
+
+<header class="home">
+  <nav>
+    <h1 class="hello">Pages</h1>
+    <%= link_to "Login", new_page_path, class: "button1 login" %>
+  </nav>
+</header>
+
+<div class="pages">
+    <% @pages.each do |page| %>
+      <div class="pages__inner-content">
+        <%= page.name %>
+        <p>
+          <%= link_to "Show this page", page %>
+        </p>
+      </div>
+    <% end %>
+</div>
+
+<%= link_to "New page", new_page_path, class: "button1 new-page" %>
